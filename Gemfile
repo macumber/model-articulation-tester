@@ -1,10 +1,10 @@
 source "http://rubygems.org"
 
-#if File.exists?('../OpenStudio-extension-gem')
-#  # gem 'openstudio-extension', github: 'NREL/OpenStudio-extension-gem', branch: 'develop'
-#  gem 'openstudio-extension', path: '../OpenStudio-extension-gem'
+#if File.exists?('../openstudio-extension-gem')
+#  # gem 'openstudio-extension', github: 'NREL/openstudio-extension-gem', branch: 'develop'
+#  gem 'openstudio-extension', path: '../openstudio-extension-gem'
 #else
-  gem 'openstudio-extension', github: 'NREL/OpenStudio-extension-gem', branch: 'develop'
+  gem 'openstudio-extension', github: 'NREL/openstudio-extension-gem', branch: 'develop'
 #end
 
 #if File.exists?('../openstudio-gems')
@@ -12,6 +12,13 @@ source "http://rubygems.org"
 #  gem 'openstudio-gems', path: '../openstudio-gems'
 #else
   gem 'openstudio-gems', github: 'NREL/openstudio-gems', branch: 'develop'
+#end
+
+#if File.exists?('../openstudio-common-measures-gem')
+#  # gem 'openstudio-common-measures', github: 'NREL/openstudio-common-measures-gem', branch: 'develop'
+#  gem 'openstudio-common-measures', path: '../openstudio-common-measures-gem'
+#else
+  gem 'openstudio-common-measures', github: 'NREL/openstudio-common-measures-gem', branch: 'develop'
 #end
 
 #if File.exists?('../openstudio-model-articulation-gem')

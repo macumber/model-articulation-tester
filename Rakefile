@@ -35,17 +35,12 @@
 ########################################################################################################################
 
 require "openstudio/extension"
-require "openstudio/model-articulation"
-
-
-# Load in the rake tasks from the base extension gem
-require "openstudio/extension/rake_task"
-os_extension = OpenStudio::Extension::RakeTask.new
-os_extension.set_measures_dir(File.join(File.expand_path(File.dirname(__FILE__)), './measures'))
+require "openstudio/common_measures"
+require "openstudio/model_articulation"
 
 desc "Run OSW"
 task :run do
-  runner = OpenStudio::Extension::Runner.new('.')
+  runner = OpenStudio::Extension::Runner.new(File.dirname(__FILE__))
   in_osw_path = File.join(File.dirname(__FILE__), 'in.osw')
   run_dir = File.join(File.dirname(__FILE__), 'test/runner/')
   

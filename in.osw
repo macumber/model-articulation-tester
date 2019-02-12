@@ -1,7 +1,7 @@
 {
 	"seed_file": null,
 	"weather_file": "openstudio-extension-gem-test.epw",
-	"measure_paths": ["../../measures"],
+	"measure_paths": [],
 	"file_paths": [],
 	"run_directory": null,
 	"steps": [
@@ -12,11 +12,6 @@
         "climate_zone": "5B"
       }
     },{
-			"measure_dir_name": "Rotate Building",
-			"arguments": {
-				"relative_building_rotation": "0"
-			}
-		},{
 			"measure_dir_name": "create_bar_from_building_type_ratios",
 			"arguments": {
         "bldg_type_a": "SmallOffice",
@@ -40,6 +35,10 @@
         "template": "90.1-2004",
         "add_thermostat": "false",
         "add_hvac": "false"
+      }
+    },{
+      "measure_dir_name": "openstudio_results",
+      "arguments": {
       }
     }
 	],
